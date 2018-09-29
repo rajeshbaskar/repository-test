@@ -1,0 +1,34 @@
+###########################git repostity push############################################################
+git init .
+echo "# testrepository" >> README.md
+git add README.md test.yml
+git commit -m "first commit"
+git log
+git status
+git show
+git log --stat -M
+git remote add origin https://github.com/kumarorg/testrepository.git
+git push -u origin master
+##############################git Branch creation############################################################
+git checkout -b master-first1
+git checkout master-first1
+git branch
+vi test1.yml
+git commit -m "firstcommit"
+git push -u origin master-first1
+###############################Git Branch merger##############################################################
+git checkout master
+git merge master-first1
+git branch
+###############################################Git Branch Delete############################################
+git branch -d master-first1
+git branch
+git push origin :master-first1
+git remote -v
+############################################Git reset and pull#########################################################
+git clone https://github.com/kumarorg/testrepository.git
+git fetch --all
+git reset --hard origin/master
+git pull origin master
+#################################################################################################
+
